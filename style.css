@@ -1,0 +1,350 @@
+@font-face{
+    src: url(fonts/Lalisa\ Kiss\ -\ Personal\ Use.otf);
+    font-family: lalisa;
+}
+
+@font-face{
+    src: url(fonts/Muthiara\ demo\ version.otf);
+    font-family: muthiara;
+}
+
+@font-face{
+    src: url(fonts/Father\ Farmhouse\ Sans.ttf);
+    font-family: father farm;
+}
+
+@font-face{
+    src: url(fonts/lemonmilk/LEMONMILK-Regular.otf);
+    font-family: lemonmilk;
+}
+
+@font-face{
+    src: url(fonts/paper\ flower/Paper\ Flowers.otf);
+    font-family: paper flower;
+}
+
+body{
+    background-color: #ffc8dd;
+}
+
+ul {
+    margin: 0;
+  }
+  ul.dashed {
+    list-style-type: none;
+  }
+  ul.dashed > li {
+    text-indent: -5px;
+  }
+  ul.dashed > li:before {
+    content: "-";
+    text-indent: -5px;
+  }
+
+.grid-container{
+    max-width: 800px;
+    min-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap:10px;
+    padding-top: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom:20px;
+    
+}
+
+.grid-item{
+    background-color: white;
+    padding: 10px;
+    
+}
+
+.grid-item-1{
+    position: sticky;
+    top:0;
+    z-index:9;
+    grid-column: span 2;
+    padding: 10px;
+    border-bottom: 8px solid #e32d91;
+}
+
+.grid-item-1 > h1{
+    margin:0;
+    color: #e53e9a;
+    font-family: muthiara;
+    font-size: 2em;
+    
+}
+
+.grid-item-1 > p{
+    margin: 0 0 10px 0;
+    font-family: lemonmilk;
+    font-size: 16px;
+}
+
+.grid-item-2{
+    grid-column: span 2;
+    padding:0;
+}
+
+.grid-item-3{
+    
+    padding:10px;
+    grid-column: span 2;
+    border-top: 8px solid #e32d91;
+    height: 40px;
+    
+}
+
+.flex-container{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+
+
+.flex-container-column{
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+
+.flex-item{
+    
+    
+    padding: 10px;
+    min-width: 200px;
+    min-height:auto;
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+.flex-item-1{
+    position:relative;
+    background-color: #e32d91;
+    text-align: center;
+    padding: 4px;
+    font-size: 12px;
+    font-family: father farm;
+    color: white;
+    border: 2px solid black;
+    letter-spacing: 4px;
+    flex-grow: 1;
+    margin-bottom: 0;
+    
+}
+
+.flex-item-1::before{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    
+    background-color: #cdb4db;
+    z-index:-1;
+    
+    transform: scaleX(0);
+    
+    transition: transform 300ms ease-in-out;
+    
+}
+
+.flex-item-1:hover::before,
+.flex-label:focus::before{
+    transform: scaleX(1);
+    
+}
+
+.flex-item-1{
+    z-index:1;
+}
+
+.flex-item-1 > h1{
+    margin:0;
+}
+
+.flex-item-2{
+    position:relative;
+    
+    background-color: white;
+    max-height: 224px;
+    max-width: 350px;
+    
+    flex-grow: 1;
+}
+
+
+.flex-item-2::before{
+    border: 2px solid black;
+    content:'';
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:10;
+    background: url(img/types\ of\ cell.png) no-repeat;
+    background-size: cover;
+    transform: scale(0);
+    transition: transform 300ms ease-in-out;
+    
+    
+}
+
+
+
+.flex-item-2:hover::before{
+    transform: scale(1.5);
+}
+
+.flex-item-3{
+    position:relative;
+    background-color: white;
+    max-width:350px;
+    
+    flex-grow: 0;
+}
+.flex-item-3::before{
+    border: 2px solid black;
+    content:'';
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:10;
+    background: url(img/blood\ cells.jpg) no-repeat;
+    background-size: cover;
+    transform: scale(0);
+    transition: transform 300ms ease-in-out;
+    
+    
+}
+
+.flex-item-3:hover::before{
+    transform: scale(1.5);
+}
+
+.img{
+    height:100%;
+    width:100%;
+
+    border: 2px solid black;
+}
+
+
+
+.flex-item-1-1{
+    margin:0;
+    background-color: white;
+    max-width: 385px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    text-align: left;
+}
+
+.flex-item-1-1 > h2{
+    margin: 20px 0 0 20px;
+    font-family: paper flower;
+    font-size: 2.25em;
+    letter-spacing: 2px;
+}
+
+.flex-item-1-2 > h2{
+    margin: 20px 0 0 0;
+    font-family: paper flower;
+    font-size: 2.25em;
+    letter-spacing: 2px;
+}
+
+
+.flex-item-1-2{
+    margin:0;
+    background-color: white;
+    max-width: 385px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    text-align: left;
+}
+
+.flex-grid-container{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 345px;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-auto-rows: minmax(auto,auto);
+    justify-content: center;
+    align-content: center;
+    
+}
+
+.flex-grid{
+    background-color: white;
+    border: 2px solid black;
+}
+
+.flex-grid-item-1{
+    border-right: 0;
+    border-bottom: 0;
+    background-color: #f9d4e8;
+}
+
+.flex-grid-item-2{
+    border-bottom:0;
+    padding: 10px;
+}
+
+.flex-grid-item-2-size{
+    font-size: 14px;
+}
+
+.flex-grid-item-2-size > p{
+    margin:0;
+}
+
+.flex-grid-item-3{
+    border-right: 0;
+    background-color: #f9d4e8;
+}
+.flex-grid-item-4{
+    padding-left: 10px;
+}
+
+.note{
+    margin:0;
+}
+
+
+.footer{
+    margin-top: 10px;
+
+    text-align: center;
+    font-family: lemonmilk;
+}
+
+
+
+
+
+
+
+
+
+
